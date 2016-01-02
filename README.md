@@ -3,7 +3,7 @@ Its a kind of toolkit to track the exception arising in the application and it w
 
 No need to worry and think to add more line of code. Simple is better. So a single invoke is enough to make better app.
 
-For Example:
+#Input
 
 <b>ACT.init(this,Class);</b>
 
