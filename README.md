@@ -78,7 +78,7 @@ android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2148)
 <li>Init from onCreate Method with context and default class<li>
 <li>Add Interent Permission<li>
 <li>Add Access Network State Permission<li>
-<li>Add Configuration in String.xml . Please refer Configuration link</li>
+<li>Add Configuration in String.xml . Please refer <a href="https://github.com/macroday/AppCrashTracker/blob/master/README.md#configuration">Configuration</a> link</li>
 </ul>
 
 #Configuration
