@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ACT_SAMPLE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="url">http://www.wings2schools.com</string>
+    <string name="default_class_name">Activity2</string>
+    <bool name="class_name">true</bool>
+	<bool name="message">true</bool>
+	<bool name="localized_message">true</bool>
+	<bool name="causes">true</bool>
+	<bool name="stack_trace">true</bool>
+	<bool name="brand_name">true</bool>
+	<bool name="device_name">true</bool>
+	<bool name="model_number">true</bool>
+	<bool name="product_name">true</bool>
+	<bool name="sdk_version">true</bool>
+	<bool name="release">true</bool>
+	<bool name="incremental">true</bool>
+	<bool name="height">true</bool>
+	<bool name="width">true</bool>
+	<bool name="app_version">true</bool>
+	<bool name="tablet">true</bool>
+</resources>
