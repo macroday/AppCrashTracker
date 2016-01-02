@@ -15,13 +15,13 @@ ACT.init(this,MainActivity.class);
 ```jsonobject
 {
 
-"Brand" : Micromax,
+"Brand" : Google Nexus,
 
-"Model" : Micromax A88,
+"Model" : Nexus 5,
 
-"Product" : Micromax A88,
+"Product" : Nexus 5,
 
-"Device" : A88,
+"Device" : 5x,
 
 "Message" : Unable to start activity ComponentInfo{com.example.act_sample\/com.example.act_sample.MainActivity}: java.lang.NumberFormatException: Invalid int: \"asdf\",
 
