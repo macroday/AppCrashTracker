@@ -5,7 +5,11 @@ No need to worry and think to add more line of code. Simple is better. So a sing
 
 #Input
 
-<b>ACT.init(this,Class);</b>
+```java
+
+ACT.init(this,MainActivity.class);
+
+```
 
 #Output
 ```jsonobject
