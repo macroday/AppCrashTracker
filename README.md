@@ -3,21 +3,25 @@ Its a kind of toolkit to track the exception arising in the application and it w
 
 No need to worry and think to add more line of code. Simple is better. So a single invoke is enough to make better app.
 
-For Example:
+#Input
 
-<b>ACT.init(this,Class);</b>
+```java
+
+ACT.init(this,MainActivity.class);
+
+```
 
 #Output
 ```jsonobject
 {
 
-"Brand" : Micromax,
+"Brand" : Google Nexus,
 
-"Model" : Micromax A88,
+"Model" : Nexus 5,
 
-"Product" : Micromax A88,
+"Product" : Nexus 5,
 
-"Device" : A88,
+"Device" : 5x,
 
 "Message" : Unable to start activity ComponentInfo{com.example.act_sample\/com.example.act_sample.MainActivity}: java.lang.NumberFormatException: Invalid int: \"asdf\",
 
@@ -74,7 +78,7 @@ android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2148)
 <li>Init from onCreate Method with context and default class<li>
 <li>Add Interent Permission<li>
 <li>Add Access Network State Permission<li>
-<li>Add Configuration in String.xml . Please refer Configuration link</li>
+<li>Add Configuration in String.xml . Please refer <a href="https://github.com/macroday/AppCrashTracker/blob/master/README.md#configuration">Configuration</a> link</li>
 </ul>
 
 #Configuration
