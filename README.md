@@ -115,7 +115,7 @@ The bool must the same name. Those are following
 
 #License
 ```license
-Copyright 2013-2014 Gabriele Mariotti
+Copyright 2015-2016 Ganesh Krishnamoorthy
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
