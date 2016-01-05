@@ -3,6 +3,7 @@ Its a kind of toolkit to track the exception arising in the application and it w
 
 No need to worry and think to add more line of code. Simple is better. So a single invoke is enough to make better app.
 
+[![API](https://img.shields.io/badge/API-11%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=11)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AppCrashTracker-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/2978)
 
 
