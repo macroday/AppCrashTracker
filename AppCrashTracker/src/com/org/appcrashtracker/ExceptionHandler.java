@@ -1,18 +1,9 @@
 package com.org.appcrashtracker;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONException;
@@ -28,7 +19,6 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -129,6 +119,8 @@ public class ExceptionHandler implements
 		    } catch (JSONException e) {
 				Log.e(""+activity.getPackageName(), "JSON Exception");
 			}
+		    
+		    Log.i("", ""+jObjectData.toString());
 		if(activity.getPackageManager().checkPermission(Manifest.permission.INTERNET, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
 		{
 			if(activity.getPackageManager().checkPermission(Manifest.permission.ACCESS_NETWORK_STATE, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
@@ -137,57 +129,57 @@ public class ExceptionHandler implements
 				{
 					if(class_name || message || localized_message || causes || stack_trace || brand_name || device_name || model_number || product_name || sdk_version || release || incremental || height || width || app_version || tablet)
 					{
-						new AsyncTask<Void,Void,Void>() {
-	
-							@Override
-							protected Void doInBackground(Void... arg0) {
-								try{
-							        URL url = null;
-									try {
-										url = new URL(Post_Url);
-									} catch (MalformedURLException e1) {
-										Log.e(""+activity.getPackageName(), "MalformedURLExcpetion");
-									}
-									HttpURLConnection conn = null;
-									try {
-										conn = (HttpURLConnection) url.openConnection();
-									} catch (IOException e1) {
-										Log.e(""+activity.getPackageName(), "IOException");
-									}
-									try {
-										conn.setRequestMethod("POST");
-									} catch (ProtocolException e1) {
-										Log.e(""+activity.getPackageName(), "ProtocolException");
-									}
-									conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-									conn.setDoInput(true);
-									conn.setDoOutput(true);
-							        List<PostValuesPair> params1 = new ArrayList<PostValuesPair>();
-							        params1.add(new PostValuesPair("error_report", jObjectData.toString()));
-							        try{
-								        OutputStream os = conn.getOutputStream();
-								        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-								        writer.write(getQuery(params1));
-								        writer.flush();
-								        writer.close();
-								        os.close();
-							        }
-							        catch(Exception ee)
-							        {
-										Log.e(""+activity.getPackageName(), "Buffer Write Exception");
-							        }
-						            try {
-										conn.connect();
-									} catch (IOException e1) {
-										Log.e(""+activity.getPackageName(), "IOException");
-									}
-							    } catch (Exception e) {
-							        Log.e(""+activity.getPackageName(), "Exception Occurred");
-							    }
-							
-								return null;
-							}
-						};
+//						new AsyncTask<Void,Void,Void>() {
+//	
+//							@Override
+//							protected Void doInBackground(Void... arg0) {
+//								try{
+//							        URL url = null;
+//									try {
+//										url = new URL(Post_Url);
+//									} catch (MalformedURLException e1) {
+//										Log.e(""+activity.getPackageName(), "MalformedURLExcpetion");
+//									}
+//									HttpURLConnection conn = null;
+//									try {
+//										conn = (HttpURLConnection) url.openConnection();
+//									} catch (IOException e1) {
+//										Log.e(""+activity.getPackageName(), "IOException");
+//									}
+//									try {
+//										conn.setRequestMethod("POST");
+//									} catch (ProtocolException e1) {
+//										Log.e(""+activity.getPackageName(), "ProtocolException");
+//									}
+//									conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+//									conn.setDoInput(true);
+//									conn.setDoOutput(true);
+//							        List<PostValuesPair> params1 = new ArrayList<PostValuesPair>();
+//							        params1.add(new PostValuesPair("error_report", jObjectData.toString()));
+//							        try{
+//								        OutputStream os = conn.getOutputStream();
+//								        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+//								        writer.write(getQuery(params1));
+//								        writer.flush();
+//								        writer.close();
+//								        os.close();
+//							        }
+//							        catch(Exception ee)
+//							        {
+//										Log.e(""+activity.getPackageName(), "Buffer Write Exception");
+//							        }
+//						            try {
+//										conn.connect();
+//									} catch (IOException e1) {
+//										Log.e(""+activity.getPackageName(), "IOException");
+//									}
+//							    } catch (Exception e) {
+//							        Log.e(""+activity.getPackageName(), "Exception Occurred");
+//							    }
+//							
+//								return null;
+//							}
+//						};
 					}
 					else
 						Log.e(""+activity.getPackageName(), "Not configured. Set configuration in string.xml");
