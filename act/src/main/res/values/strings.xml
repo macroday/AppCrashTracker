@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url">default_url</string>
+    <bool name="class_name">false</bool>
+    <bool name="message">false</bool>
+    <bool name="localized_message">false</bool>
+    <bool name="causes">false</bool>
+    <bool name="stack_trace">false</bool>
+    <bool name="brand_name">false</bool>
+    <bool name="device_name">false</bool>
+    <bool name="model_number">false</bool>
+    <bool name="product_name">false</bool>
+    <bool name="sdk_version">false</bool>
+    <bool name="release">false</bool>
+    <bool name="incremental">false</bool>
+    <bool name="height">false</bool>
+    <bool name="width">false</bool>
+    <bool name="app_version">false</bool>
+    <bool name="tablet">false</bool>
+</resources>
