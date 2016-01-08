@@ -108,6 +108,8 @@ android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2148)
 ... 11 more,
 
 "Cause" : java.lang.NumberFormatException: Invalid int: \"asdf\"
+
+"Country" : India
 }
 ```
 
@@ -161,6 +163,7 @@ The bool must the same name. Those are following
 	<bool name="external_free_space">false</bool>
 	<bool name="device_rooted">false</bool>
 	<bool name="network_mode">false</bool>
+	<bool name="country">false</bool>
 
 ```
 
