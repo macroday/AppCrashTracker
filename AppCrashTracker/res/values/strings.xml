@@ -37,5 +37,6 @@
 	<bool name="external_free_space">false</bool>
 	<bool name="device_rooted">false</bool>
 	<bool name="network_mode">false</bool>
+	<bool name="country">false</bool>
 	
 </resources>

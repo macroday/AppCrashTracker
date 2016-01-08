@@ -16,6 +16,7 @@ import java.net.URLEncoder;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -85,6 +86,7 @@ public class ExceptionHandler implements
 	private boolean package_name= false;
 	private boolean device_rooted= false;
 	private boolean network_mode= false;
+	private boolean country= false;
 		
 	public ExceptionHandler(Activity activity,Class<?> name) {
 		this.activity = activity;
@@ -130,6 +132,7 @@ public class ExceptionHandler implements
 			package_name = activity.getResources().getBoolean(R.bool.package_name);
 			device_rooted = activity.getResources().getBoolean(R.bool.device_rooted);
 			network_mode = activity.getResources().getBoolean(R.bool.network_mode);
+			country = activity.getResources().getBoolean(R.bool.country);
 		}
 	}
 	
@@ -211,10 +214,14 @@ public class ExceptionHandler implements
 		    		jObjectData.put("Device_IsRooted", isRooted());
 		    	if(network_mode)
 		    		jObjectData.put("Network_Mode", getNetworkMode(activity));
+		    	if(country)
+		    		jObjectData.put("Country", new Locale("",activity.getResources().getConfiguration().locale.getCountry()).getDisplayCountry());
 		    } catch (JSONException e) {
 				Log.e(""+activity.getPackageName(), "JSON Exception");
 			}
-		    Log.i("", ""+jObjectData.toString());
+		    Log.i("", ">>>>>>>>>>>>>>>>>>"+((TelephonyManager) activity.getSystemService(Context.TELEPHONY_SERVICE)).getNetworkOperatorName());
+		    
+		    
 		if(activity.getPackageManager().checkPermission(Manifest.permission.INTERNET, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
 		{
 			if(activity.getPackageManager().checkPermission(Manifest.permission.ACCESS_NETWORK_STATE, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
@@ -234,7 +241,7 @@ public class ExceptionHandler implements
 							|| battery_charging_via || sd_card_status
 							|| internal_memory_size || external_memory_size
 							|| internal_free_space || external_free_space
-							|| package_name || device_rooted || network_mode) {
+							|| package_name || device_rooted || network_mode || country) {
 						new AsyncTask<Void,Void,Void>() {
 	
 							@Override
@@ -546,5 +553,11 @@ public class ExceptionHandler implements
         	return "No Network";
         }
 		return "NULL";
+    }
+    public boolean isSimSupport(Context context)
+    {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        return !(tm.getSimState() == TelephonyManager.SIM_STATE_ABSENT);
+
     }
 }
