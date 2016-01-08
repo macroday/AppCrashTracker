@@ -144,7 +144,7 @@ public class ExceptionHandler implements
 	    jObjectData = new JSONObject();
 		    try {
 		    	if(package_name)
-		    		jObjectData.put("Class", activity.getPackageName());
+		    		jObjectData.put("Package_Name", activity.getPackageName());
 		    	if(class_name)
 		    		jObjectData.put("Class", ActivityName);
 		    	if(message)
@@ -210,11 +210,11 @@ public class ExceptionHandler implements
 		    	if(device_rooted)
 		    		jObjectData.put("Device_IsRooted", isRooted());
 		    	if(network_mode)
-		    		jObjectData.put("Device_IsRooted", getNetworkMode(activity));
+		    		jObjectData.put("Network_Mode", getNetworkMode(activity));
 		    } catch (JSONException e) {
 				Log.e(""+activity.getPackageName(), "JSON Exception");
 			}
-		    
+		    Log.i("", ""+jObjectData.toString());
 		if(activity.getPackageManager().checkPermission(Manifest.permission.INTERNET, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
 		{
 			if(activity.getPackageManager().checkPermission(Manifest.permission.ACCESS_NETWORK_STATE, activity.getPackageName()) == PackageManager.PERMISSION_GRANTED)
@@ -365,16 +365,16 @@ public class ExceptionHandler implements
 	{
 	    Display getOrient = act.getWindowManager().getDefaultDisplay();
 	    if(getOrient.getWidth()==getOrient.getHeight()){
-	    	return "Orientation_Square";
+	    	return "Square";
 	    }
 	    else
 	    { 
 	        if(getOrient.getWidth() < getOrient.getHeight()){
-	        	return "Orientation_Portrait";
+	        	return "Portrait";
 	        }
 	        else
 	        { 
-	        	return "Orientation_Landscape";
+	        	return "Landscape";
 	        }
 	    }
 	}
@@ -428,9 +428,9 @@ public class ExceptionHandler implements
 	{
 		Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
 		if(isSDPresent)
-			return "SD Card mounted";
+			return "Mounted";
 		else 
-			return "SD Card not mounted";
+			return "Not mounted";
 	}
 
     @SuppressWarnings("deprecation")
