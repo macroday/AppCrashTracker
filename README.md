@@ -20,6 +20,40 @@ ACT.init(this,MainActivity.class);
 ```jsonobject
 {
 
+"Package_Name" : com.example.act_sample,
+
+"VM_Max_Heap_Size" : 9.3 MB,
+
+"VM_free_Heap_Size" : 64 MB,
+
+"VM_Heap_Size" : 9.8 MB,
+
+"Internal_Memory_Size" : 503.4 MB,
+
+"Internal_Free_Space" : 100.3 MB,
+
+"Device_Orientation" : Portrait,
+
+"Screen_Layout" : Normal Screen,
+
+"SDCard_Status" : Mounted,
+
+"External_Free_Space" : 1.8 GB,
+
+"Battery_Percentage" : 100,
+
+"Device_IsRooted" : false,
+
+"Network_Mode" : Wifi,
+
+"Battery_Charging_Via" : USB,
+
+"Native_Allocated_Size" : 2 MB,
+
+"External_Memory_Size" : 7.4 GB,
+
+"Allocated_VM_Size" : 482.1 kB,
+
 "Brand" : Google Nexus,
 
 "Model" : Nexus 5,
@@ -91,23 +125,42 @@ Its nothing but, you can customize the data come out from the result. For exampl
 The bool must the same name. Those are following
 
 ```xml
-<string name="url">post_url</string>
-<bool name="class_name">ture</bool>
-<bool name="message">true</bool>
-<bool name="localized_message">true</bool>
-<bool name="causes">true</bool>
-<bool name="stack_trace">true</bool>
-<bool name="brand_name">false</bool>
-<bool name="device_name">false</bool>
-<bool name="model_number">false</bool>
-<bool name="product_name">false</bool>
-<bool name="sdk_version">false</bool>
-<bool name="release">false</bool>
-<bool name="incremental">false</bool>
-<bool name="height">false</bool>
-<bool name="width">false</bool>
-<bool name="app_version">false</bool>
-<bool name="tablet">false</bool>
+   <string name="url">post_url</string>
+   <bool name="class_name">ture</bool>
+   <bool name="message">true</bool>
+   <bool name="localized_message">true</bool>
+   <bool name="causes">true</bool>
+   <bool name="stack_trace">true</bool>
+   <bool name="brand_name">false</bool>
+   <bool name="device_name">false</bool>
+   <bool name="model_number">false</bool>
+   <bool name="product_name">false</bool>
+   <bool name="sdk_version">false</bool>
+   <bool name="release">false</bool>
+   <bool name="incremental">false</bool>
+   <bool name="height">false</bool>
+   <bool name="width">false</bool>
+   <bool name="app_version">false</bool>
+   <bool name="tablet">false</bool>
+   < !-- Updated features -->
+   <bool name="package_name">false</bool>
+   <bool name="device_orientation">false</bool>
+	<bool name="screen_layout">false</bool>
+	<bool name="vm_heap_size">false</bool>
+	<bool name="allocated_vm_size">false</bool>
+	<bool name="vm_max_heap_size">false</bool>
+	<bool name="vm_free_heap_size">false</bool>
+	<bool name="native_allocated_size">false</bool>
+	<bool name="battery_percentage">false</bool>
+	<bool name="battery_charging">false</bool>
+	<bool name="battery_charging_via">false</bool>
+	<bool name="sd_card_status">false</bool>
+	<bool name="internal_memory_size">false</bool>
+	<bool name="external_memory_size">false</bool>
+	<bool name="internal_free_space">false</bool>
+	<bool name="external_free_space">false</bool>
+	<bool name="device_rooted">false</bool>
+	<bool name="network_mode">false</bool>
 
 ```
 
