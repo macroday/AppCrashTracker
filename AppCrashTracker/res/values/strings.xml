@@ -19,5 +19,23 @@
 	<bool name="width">false</bool>
 	<bool name="app_version">false</bool>
 	<bool name="tablet">false</bool>
+	<bool name="package_name">false</bool>
+	<bool name="device_orientation">false</bool>
+	<bool name="screen_layout">false</bool>
+	<bool name="vm_heap_size">false</bool>
+	<bool name="allocated_vm_size">false</bool>
+	<bool name="vm_max_heap_size">false</bool>
+	<bool name="vm_free_heap_size">false</bool>
+	<bool name="native_allocated_size">false</bool>
+	<bool name="battery_percentage">false</bool>
+	<bool name="battery_charging">false</bool>
+	<bool name="battery_charging_via">false</bool>
+	<bool name="sd_card_status">false</bool>
+	<bool name="internal_memory_size">false</bool>
+	<bool name="external_memory_size">false</bool>
+	<bool name="internal_free_space">false</bool>
+	<bool name="external_free_space">false</bool>
+	<bool name="device_rooted">false</bool>
+	<bool name="network_mode">false</bool>
 	
 </resources>

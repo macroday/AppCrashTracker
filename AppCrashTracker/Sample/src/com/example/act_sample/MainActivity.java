@@ -11,9 +11,10 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
 		ACT.init(MainActivity.this,Activity2.class);
+		setContentView(R.layout.activity_main);
 		
 		Log.i("", ""+Integer.parseInt("asdf"));
 	}
+	
 }
