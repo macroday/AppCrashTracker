@@ -221,8 +221,20 @@ public class ExceptionHandler implements
 			{
 				if(isConnectingToInternet(activity))
 				{
-					if(class_name || message || localized_message || causes || stack_trace || brand_name || device_name || model_number || product_name || sdk_version || release || incremental || height || width || app_version || tablet)
-					{
+					 
+					if (class_name || message || localized_message || causes
+							|| stack_trace || brand_name || device_name
+							|| model_number || product_name || sdk_version
+							|| release || incremental || height || width
+							|| app_version || tablet || device_orientation
+							|| screen_layout || vm_heap_size
+							|| allocated_vm_size || vm_max_heap_size
+							|| vm_free_heap_size || native_allocated_size
+							|| battery_percentage || battery_charging
+							|| battery_charging_via || sd_card_status
+							|| internal_memory_size || external_memory_size
+							|| internal_free_space || external_free_space
+							|| package_name || device_rooted || network_mode) {
 						new AsyncTask<Void,Void,Void>() {
 	
 							@Override
