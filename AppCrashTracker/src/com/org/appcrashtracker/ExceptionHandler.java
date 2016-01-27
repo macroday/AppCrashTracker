@@ -292,7 +292,7 @@ public class ExceptionHandler implements
 							
 								return null;
 							}
-						};
+						}.execute();
 					}
 					else
 						Log.e(""+activity.getPackageName(), "Not configured. Set configuration in string.xml");
