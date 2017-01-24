@@ -190,7 +190,7 @@ limitations under the License.
 
 ```
 
-Please give me a feedback! Thanks!!
+Please give me feedback! Thanks!!
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/macroday/appcrashtracker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
